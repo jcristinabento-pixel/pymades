@@ -7,9 +7,9 @@ class Premades:
     def __str__(self):
         return f"Premade class made by Ferch"
 
-    def log(self, content, end="\n", amount=1):
+    def log(self, content, end="\n", flush=False, amount=1):
         for _ in range(amount):
-            self.builtins.print(content, end=end)
+            self.builtins.print(content, end=end, flush=flush)
 
     def urlib_quote(self, content, plus=False):
         if plus:

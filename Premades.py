@@ -26,6 +26,13 @@ class Premades:
     def randint(self, n1, n2):
         return self.random.randint(n1, n2)
 
+    def choice(self, sequence):
+        return self.random.choice(sequence)
+
+    def shuffle(self, lst):
+        self.random.shuffle(lst)
+        return lst
+
     def forprint(self, var):
         count = 0
         for content in var:

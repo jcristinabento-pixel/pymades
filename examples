@@ -9,7 +9,7 @@ premades.log("Hello GitHub!", amount=3)
 premades.log("")
 
 premades.log("--- Testing URL Utilities ---")
-raw_url = "sack of sand ɓ"
+raw_url = "api do pollinations"
 encoded_url = premades.urlib_quote(raw_url, plus=True)
 decoded_url = premades.urllib_unquote(encoded_url, plus=True)
 
@@ -23,8 +23,18 @@ random_id = premades.randint(1000, 9999)
 premades.log(f"Generated Random Project ID: {random_id}")
 premades.log("")
 
-premades.log("--- Testing forprint Formatter ---")
+premades.log("--- Testing Random Choice ---")
 dev_team = ["javerson", "ferch", "python_bot"]
+chosen_dev = premades.choice(dev_team)
+premades.log(f"Selected developer: {chosen_dev}")
+premades.log("")
 
+premades.log("--- Testing Random Shuffle ---")
+premades.log(f"Original list: {dev_team}")
+shuffled_team = premades.shuffle(dev_team.copy())
+premades.log(f"Shuffled list: {shuffled_team}")
+premades.log("")
+
+premades.log("--- Testing forprint Formatter ---")
 total_objects = premades.forprint(dev_team)
 premades.log(f"Total objects printed: {total_objects}")

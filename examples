@@ -1,22 +1,16 @@
 from premades import premades
 
-# 1. Testing the __str__ method
-# This will trigger the string representation of your class
 premades.log("--- Class Information ---")
 premades.log(str(premades))
 premades.log("")
 
-# 2. Testing the log method
-# Prints the content multiple times using the builtins wrapper
 premades.log("--- Testing log method ---")
 premades.log("Hello GitHub!", amount=3)
 premades.log("")
 
-# 3. Testing urllib_quote and urllib_unquote methods
-# Encodes and decodes URLs for web development utilities
 premades.log("--- Testing URL Utilities ---")
-raw_url = "api do pollinations"
-encoded_url = premades.urllib_quote(raw_url, plus=True)
+raw_url = "sack of sand ɓ"
+encoded_url = premades.urlib_quote(raw_url, plus=True)
 decoded_url = premades.urllib_unquote(encoded_url, plus=True)
 
 premades.log(f"Original text: {raw_url}")
@@ -24,20 +18,13 @@ premades.log(f"Encoded URL:  {encoded_url}")
 premades.log(f"Decoded URL:  {decoded_url}")
 premades.log("")
 
-# 4. Testing randint method
-# Generates a secure random number within a range
 premades.log("--- Testing Random Integer ---")
 random_id = premades.randint(1000, 9999)
 premades.log(f"Generated Random Project ID: {random_id}")
 premades.log("")
 
-# 5. Testing forin method
-# Formats a collection into a readable string using custom separators
-premades.log("--- Testing forin Formatter ---")
+premades.log("--- Testing forprint Formatter ---")
 dev_team = ["javerson", "ferch", "python_bot"]
 
-premades.log("Default list format (New lines):")
-premades.log(premades.forin(dev_team))
-
-premades.log("\nCustom list format (Arrows):")
-premades.log(premades.forin(dev_team, separator=" -> "))
+total_objects = premades.forprint(dev_team)
+premades.log(f"Total objects printed: {total_objects}")

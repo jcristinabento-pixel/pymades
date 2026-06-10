@@ -9,8 +9,8 @@ premades.log("Hello GitHub!", amount=3)
 premades.log("")
 
 premades.log("--- Testing URL Utilities ---")
-raw_url = "api do pollinations"
-encoded_url = premades.urlib_quote(raw_url, plus=True)
+raw_url = "a sand sáck boy"
+encoded_url = premades.urllib_quote(raw_url, plus=True)
 decoded_url = premades.urllib_unquote(encoded_url, plus=True)
 
 premades.log(f"Original text: {raw_url}")
@@ -38,3 +38,11 @@ premades.log("")
 premades.log("--- Testing forprint Formatter ---")
 total_objects = premades.forprint(dev_team)
 premades.log(f"Total objects printed: {total_objects}")
+premades.log("")
+
+premades.log("--- Testing Timer ---")
+premades.timer_start()
+for _ in range(1000000):
+    pass
+elapsed = premades.timer_end()
+premades.log(f"Elapsed time: {elapsed:.6f} seconds")
